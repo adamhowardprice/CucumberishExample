@@ -13,7 +13,7 @@ class CucumberishInitializer: NSObject {
             }
             
             When("I tap the button") { args, _ in
-                XCUIApplication().buttons["Tap Me"].tap()
+                XCUIApplication().buttons["mainButton"].tap()
             }
             
             Then("the button should say \"([^\\\"]*)\"") { args, _ in
@@ -22,7 +22,7 @@ class CucumberishInitializer: NSObject {
             }
             
             When("I tap the button again") { args, _ in
-                XCUIApplication().buttons["Tapped"].tap()
+                XCUIApplication().buttons["mainButton"].tap()
             }
         })
         

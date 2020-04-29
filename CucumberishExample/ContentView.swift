@@ -12,11 +12,9 @@ struct ContentView: View {
     @State var text = "Tap Me"
     
     var body: some View {
-        Button(action: {
+        Button(text) {
             self.text = self.text == "Tap Me" ? "Tapped" : "Tap Me"
-        }) {
-            Text(text)
-        }
+        }.accessibility(identifier: "mainButton")
     }
 }
 
