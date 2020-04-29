@@ -1,0 +1,6 @@
+framework module Pods_CucumberishExampleTests {
+  umbrella header "Pods-CucumberishExampleTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
