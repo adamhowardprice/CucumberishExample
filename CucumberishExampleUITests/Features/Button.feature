@@ -1,4 +1,3 @@
-
 Feature: Tap button
 
 Scenario: As a user, I want the button to say "Tapped" when I tap it

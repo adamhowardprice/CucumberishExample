@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  CucumberishExample
-//
-//  Created by Adam Price on 4/28/20.
-//  Copyright © 2020 Adam Price. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
