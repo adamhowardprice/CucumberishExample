@@ -20,6 +20,8 @@
 		89324B83245935EB002E0DA4 /* Features in Resources */ = {isa = PBXBuildFile; fileRef = 89324B82245935EB002E0DA4 /* Features */; };
 		89324B86245935F9002E0DA4 /* CucumberishLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 89324B85245935F9002E0DA4 /* CucumberishLoader.m */; };
 		89324B8824593665002E0DA4 /* CucumberishInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89324B8724593665002E0DA4 /* CucumberishInitializer.swift */; };
+		89324B8C24593FB2002E0DA4 /* ButtonMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89324B8B24593FB2002E0DA4 /* ButtonMatchers.swift */; };
+		89324B8E24594040002E0DA4 /* AllMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89324B8D24594040002E0DA4 /* AllMatchers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		89324B84245935F8002E0DA4 /* CucumberishExampleUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CucumberishExampleUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		89324B85245935F9002E0DA4 /* CucumberishLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CucumberishLoader.m; sourceTree = "<group>"; };
 		89324B8724593665002E0DA4 /* CucumberishInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CucumberishInitializer.swift; sourceTree = "<group>"; };
+		89324B8B24593FB2002E0DA4 /* ButtonMatchers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonMatchers.swift; sourceTree = "<group>"; };
+		89324B8D24594040002E0DA4 /* AllMatchers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMatchers.swift; sourceTree = "<group>"; };
 		B00EFE1971779F4D72388CB8 /* Pods_CucumberishExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CucumberishExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BADA8DB4B79D2563653AC6E7 /* Pods-CucumberishExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CucumberishExampleUITests.release.xcconfig"; path = "Target Support Files/Pods-CucumberishExampleUITests/Pods-CucumberishExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,6 +179,8 @@
 			children = (
 				89324B85245935F9002E0DA4 /* CucumberishLoader.m */,
 				89324B8724593665002E0DA4 /* CucumberishInitializer.swift */,
+				89324B8B24593FB2002E0DA4 /* ButtonMatchers.swift */,
+				89324B8D24594040002E0DA4 /* AllMatchers.swift */,
 			);
 			path = CucumberishSupport;
 			sourceTree = "<group>";
@@ -433,8 +439,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89324B8E24594040002E0DA4 /* AllMatchers.swift in Sources */,
 				89324B8824593665002E0DA4 /* CucumberishInitializer.swift in Sources */,
 				89324B86245935F9002E0DA4 /* CucumberishLoader.m in Sources */,
+				89324B8C24593FB2002E0DA4 /* ButtonMatchers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

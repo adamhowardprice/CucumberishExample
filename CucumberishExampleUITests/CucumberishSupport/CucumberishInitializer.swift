@@ -8,22 +8,8 @@ class CucumberishInitializer: NSObject {
         
         before({ _ in
             
-            Given("I launch the app") { args, _ in
-                XCUIApplication().launch()
-            }
-            
-            When("I tap the button") { args, _ in
-                XCUIApplication().buttons["mainButton"].tap()
-            }
-            
-            Then("the button should say \"([^\\\"]*)\"") { args, _ in
-                let text = (args?[0])!
-                XCTAssertTrue(XCUIApplication().buttons[text].exists)
-            }
-            
-            When("I tap the button again") { args, _ in
-                XCUIApplication().buttons["mainButton"].tap()
-            }
+            AllMatchers.setup()
+
         })
         
         let bundle = Bundle(for: CucumberishInitializer.self)
