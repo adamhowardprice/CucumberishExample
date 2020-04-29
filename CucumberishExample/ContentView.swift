@@ -9,11 +9,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var text = "Tap Me"
+    
     var body: some View {
         Button(action: {
-            print("tap")
+            self.text = self.text == "Tap Me" ? "Tapped" : "Tap Me"
         }) {
-            Text("Tap Me")
+            Text(text)
         }
     }
 }

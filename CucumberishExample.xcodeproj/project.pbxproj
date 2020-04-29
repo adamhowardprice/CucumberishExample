@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,7 +17,9 @@
 		89324B572459312F002E0DA4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89324B562459312F002E0DA4 /* Preview Assets.xcassets */; };
 		89324B5A2459312F002E0DA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89324B582459312F002E0DA4 /* LaunchScreen.storyboard */; };
 		89324B652459312F002E0DA4 /* CucumberishExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89324B642459312F002E0DA4 /* CucumberishExampleTests.swift */; };
-		89324B702459312F002E0DA4 /* CucumberishExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89324B6F2459312F002E0DA4 /* CucumberishExampleUITests.swift */; };
+		89324B83245935EB002E0DA4 /* Features in Resources */ = {isa = PBXBuildFile; fileRef = 89324B82245935EB002E0DA4 /* Features */; };
+		89324B86245935F9002E0DA4 /* CucumberishLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 89324B85245935F9002E0DA4 /* CucumberishLoader.m */; };
+		89324B8824593665002E0DA4 /* CucumberishInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89324B8724593665002E0DA4 /* CucumberishInitializer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +59,11 @@
 		89324B642459312F002E0DA4 /* CucumberishExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CucumberishExampleTests.swift; sourceTree = "<group>"; };
 		89324B662459312F002E0DA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89324B6B2459312F002E0DA4 /* CucumberishExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CucumberishExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		89324B6F2459312F002E0DA4 /* CucumberishExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CucumberishExampleUITests.swift; sourceTree = "<group>"; };
 		89324B712459312F002E0DA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89324B82245935EB002E0DA4 /* Features */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Features; sourceTree = "<group>"; };
+		89324B84245935F8002E0DA4 /* CucumberishExampleUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CucumberishExampleUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		89324B85245935F9002E0DA4 /* CucumberishLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CucumberishLoader.m; sourceTree = "<group>"; };
+		89324B8724593665002E0DA4 /* CucumberishInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CucumberishInitializer.swift; sourceTree = "<group>"; };
 		B00EFE1971779F4D72388CB8 /* Pods_CucumberishExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CucumberishExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BADA8DB4B79D2563653AC6E7 /* Pods-CucumberishExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CucumberishExampleUITests.release.xcconfig"; path = "Target Support Files/Pods-CucumberishExampleUITests/Pods-CucumberishExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,10 +162,21 @@
 		89324B6E2459312F002E0DA4 /* CucumberishExampleUITests */ = {
 			isa = PBXGroup;
 			children = (
-				89324B6F2459312F002E0DA4 /* CucumberishExampleUITests.swift */,
+				89324B8A24593677002E0DA4 /* CucumberishSupport */,
+				89324B82245935EB002E0DA4 /* Features */,
 				89324B712459312F002E0DA4 /* Info.plist */,
+				89324B84245935F8002E0DA4 /* CucumberishExampleUITests-Bridging-Header.h */,
 			);
 			path = CucumberishExampleUITests;
+			sourceTree = "<group>";
+		};
+		89324B8A24593677002E0DA4 /* CucumberishSupport */ = {
+			isa = PBXGroup;
+			children = (
+				89324B85245935F9002E0DA4 /* CucumberishLoader.m */,
+				89324B8724593665002E0DA4 /* CucumberishInitializer.swift */,
+			);
+			path = CucumberishSupport;
 			sourceTree = "<group>";
 		};
 		FA7668EE9CA14D2F20C9C1D0 /* Pods */ = {
@@ -173,7 +189,6 @@
 				21FA6248A253BC642E31EC4B /* Pods-CucumberishExampleUITests.debug.xcconfig */,
 				BADA8DB4B79D2563653AC6E7 /* Pods-CucumberishExampleUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -256,6 +271,7 @@
 					};
 					89324B6A2459312F002E0DA4 = {
 						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
 						TestTargetID = 89324B492459312C002E0DA4;
 					};
 				};
@@ -302,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89324B83245935EB002E0DA4 /* Features in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +433,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89324B702459312F002E0DA4 /* CucumberishExampleUITests.swift in Sources */,
+				89324B8824593665002E0DA4 /* CucumberishInitializer.swift in Sources */,
+				89324B86245935F9002E0DA4 /* CucumberishLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,7 +668,9 @@
 			baseConfigurationReference = 21FA6248A253BC642E31EC4B /* Pods-CucumberishExampleUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = CucumberishExampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -659,6 +679,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.butterflynetinc.CucumberishExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CucumberishExampleUITests/CucumberishExampleUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = CucumberishExample;
@@ -670,7 +692,9 @@
 			baseConfigurationReference = BADA8DB4B79D2563653AC6E7 /* Pods-CucumberishExampleUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = CucumberishExampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -679,6 +703,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.butterflynetinc.CucumberishExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CucumberishExampleUITests/CucumberishExampleUITests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = CucumberishExample;
