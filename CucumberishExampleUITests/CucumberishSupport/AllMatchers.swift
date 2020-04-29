@@ -1,7 +1,7 @@
 import Foundation
 import Cucumberish
 
-protocol Matcher {
+protocol Matchers {
     
     static func setup()
     
@@ -9,7 +9,7 @@ protocol Matcher {
 
 class AllMatchers {
     
-    public static let matchers: [Matcher.Type] = [ButtonMatchers.self]
+    public static let matchers: [Matchers.Type] = [ButtonMatchers.self, CommonMatchers.self]
     
     public static func setup() {
         matchers.forEach {

@@ -9,13 +9,9 @@
 import Foundation
 import Cucumberish
 
-class ButtonMatchers: Matcher {
+class ButtonMatchers: Matchers {
     
     public static func setup() {
-        Given("I launch the app") { args, _ in
-            XCUIApplication().launch()
-        }
-        
         When("I tap the button") { args, _ in
             XCUIApplication().buttons["mainButton"].tap()
         }
